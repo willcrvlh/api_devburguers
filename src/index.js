@@ -1,16 +1,16 @@
 // Importações de bibliotecas Express e Dotenv
-import express from 'express';
-import * as dotenv from 'dotenv';
+import express from "express";
+import * as dotenv from "dotenv";
+import cors from "cors";
 
-dotenv.config()
-const app = express()
-
-
+dotenv.config();
+const app = express();
+app.use(cors());
 app.use(express.json());
 
 // rotas dos pedidos
-import pedidosController from './controller/pedidos-controller.js'
-app.use('/pedidos', pedidosController)
+import pedidosController from "./controller/pedidos-controller.js";
+app.use("/pedidos", pedidosController);
 
 // rotas dos funcionários
 import funcionarioController from "./controller/funcionario-controller.js";
@@ -18,11 +18,11 @@ app.use("/funcionarios", funcionarioController);
 
 //rotas dos produtos
 import produtosController from "./controller/produtos-controller.js";
-app.use('/produtos', produtosController)
+app.use("/produtos", produtosController);
 
 //rotas dos fornecedores
 import fornecedoresController from "./controller/fornecedores-controller.js";
-app.use('/fornecedores', fornecedoresController)
+app.use("/fornecedores", fornecedoresController);
 
 // Exportando o Express
-export default app
+export default app;
