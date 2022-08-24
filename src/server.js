@@ -19,7 +19,7 @@ mongoose
   .then(() => {
     app.listen(port, () => {
       console.log(
-        "Banco de dados conectado com sucesso! \nEndpoint: http://localhost:3000"
+        `Banco de dados conectado com sucesso! \nEndpoint: http://localhost:${port}`
       );
     });
   })
