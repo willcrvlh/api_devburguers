@@ -13,16 +13,16 @@ import pedidosController from "./controller/pedidos-controller.js";
 app.use("/pedidos", pedidosController);
 
 // rotas dos funcionários
-import funcionarioController from "./controller/funcionario-controller.js";
-app.use("/funcionarios", funcionarioController);
+// import funcionarioController from "./controller/funcionario-controller.js";
+// app.use("/funcionarios", funcionarioController);
 
 //rotas dos produtos
-import produtosController from "./controller/produtos-controller.js";
-app.use("/produtos", produtosController);
+// import produtosController from "./controller/produtos-controller.js";
+// app.use("/produtos", produtosController);
 
 //rotas dos fornecedores
-import fornecedoresController from "./controller/fornecedores-controller.js";
-app.use("/fornecedores", fornecedoresController);
+// import fornecedoresController from "./controller/fornecedores-controller.js";
+// app.use("/fornecedores", fornecedoresController);
 
 // Exportando o Express
 export default app;
