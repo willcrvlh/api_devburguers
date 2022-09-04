@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 // Conectando com o banco de dados
 mongoose
   .connect(
-    `mongodb+srv://${devburguers_db_user}:${devburguers_db_password}@devburguers.c3dpllu.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://${devburguers_db_user}:${devburguers_db_password}@cluster0.uizefo3.mongodb.net/?retryWrites=true&w=majority`
   )
   // Se der tudo ok com a conexão, o then aparece com a seguinte mensagem:
   .then(() => {

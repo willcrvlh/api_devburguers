@@ -8,7 +8,7 @@ import Produtos from "../model/produtos.js";
 //Create - criação de dados
 router.post("/", async (req, res) => {
     //req.body
-    const { nome, ingredientes, preço } = req.body;
+    const {url, nome, ingredientes, preço } = req.body;
 
     if (!Produtos) {
         res.status(422).json({ error: "O nome do produto é obrigatório!" });
@@ -16,6 +16,7 @@ router.post("/", async (req, res) => {
     }
 
     const produtos = {
+        url,
         nome,
         ingredientes,
         preço,
@@ -58,8 +59,9 @@ router.get('/:id', async (req, res) => {
 //Update - atualização de dados (PUT, PATCH)
 router.patch('/:id', async (req, res) => {
     const id = req.params.id
-    const { nome, ingredientes, preço } = req.body
+    const { url, nome, ingredientes, preço } = req.body
     const produtos = {
+        url,
         nome,
         ingredientes,
         preço
